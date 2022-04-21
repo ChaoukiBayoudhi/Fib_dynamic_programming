@@ -14,17 +14,22 @@ public class Application {
         long end=System.currentTimeMillis();
         //Stopwatch.start();
         System.out.println("Fibonacci[dynamic Version]( "+ n + " ) = "+ result);
-        System.out.println("Execution Time [dynamic version] = "+(end-start));
+        System.out.println("Execution Time [dynamic version] = "+(end-start)+ " milli seconds");
         //Test Fibonacci naive version
         long start1=System.currentTimeMillis();
         result=Fibonacci.fibRecNaive(n);
         long end1=System.currentTimeMillis();
         System.out.println("Fibonacci[Naive Version]( "+ n + " ) = "+ result);
-        System.out.println("Execution Time [Naive version] = "+(end1-start1));
+        System.out.println("Execution Time [Naive version] = "+(end1-start1)+ " milli seconds");
         long start2=System.currentTimeMillis();
         result=Fibonacci.fibDynProgBottomUp(n);
         long end2=System.currentTimeMillis();
         System.out.println("Fibonacci[dyn bottom-up Version]( "+ n + " ) = "+ result);
-        System.out.println("Execution Time [dyn bottom-up version] = "+(end2-start2));
+        System.out.println("Execution Time [dyn bottom-up version] = "+(end2-start2)+ " milli seconds");
+        long start3=System.currentTimeMillis();
+        result=Fibonacci.FibDynBottomUpNoCache(n);
+        long end3=System.currentTimeMillis();
+        System.out.println("Fibonacci[dyn bottom-up Version]( "+ n + " ) = "+ result);
+        System.out.println("Execution Time [dyn bottom-up version] = "+(end3-start3)+ " milli seconds");
     }
 }
